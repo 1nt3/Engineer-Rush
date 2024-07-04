@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjw07dl6xehhx"]
+[gd_scene load_steps=8 format=3 uid="uid://bjw07dl6xehhx"]
 
 [ext_resource type="PackedScene" uid="uid://dui3g4vdt88p1" path="res://player.tscn" id="2_45mye"]
 [ext_resource type="PackedScene" uid="uid://bbgypqkmnefvp" path="res://controlador_terreno.tscn" id="2_118bu"]
+[ext_resource type="AudioStream" uid="uid://e047ygh67nia" path="res://music/accion.wav" id="4_ecb40"]
 [ext_resource type="PackedScene" uid="uid://d2mivm2k44k2l" path="res://niveles/node_inf.tscn" id="4_y4uni"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g7y03"]
@@ -32,3 +33,7 @@ shadow_enabled = true
 transform = Transform3D(-0.999782, 0, -0.02089, 0, 1, 0, 0.02089, 0, -0.999782, 0, 0, 0)
 
 [node name="Node3D" parent="." instance=ExtResource("4_y4uni")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_ecb40")
+autoplay = true

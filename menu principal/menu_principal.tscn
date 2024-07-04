@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxk0ksf6dsbue"]
+[gd_scene load_steps=6 format=3 uid="uid://bxk0ksf6dsbue"]
 
 [ext_resource type="Script" path="res://menu principal/menu_principal.gd" id="1_f88hq"]
 [ext_resource type="Texture2D" uid="uid://cxs72fd8vrttg" path="res://assets/extras/Fondo_de_inicio_Engineer_Rush.jpg" id="2_kuso2"]
 [ext_resource type="Texture2D" uid="uid://0d1o40m8mtfi" path="res://assets/extras/Engineer_Rush_2.png" id="3_bywnf"]
+[ext_resource type="AudioStream" uid="uid://dl76ojrlmwb06" path="res://music/menu_pausa.wav" id="4_a6vmt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8qg3"]
 corner_radius_top_left = 32
@@ -115,5 +116,9 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_q8qg3")
 text = "?"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_a6vmt")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
